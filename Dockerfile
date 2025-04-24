@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get upgrade -y && \
-apt-get install curl git wget tmux build-essential jq make lz4 gcc unzip -y
+apt-get install curl git wget tmux build-essential jq make lz4 unzip -y
 
 ENV HOME=/app \
 NODENAME="Stake Shark" \
