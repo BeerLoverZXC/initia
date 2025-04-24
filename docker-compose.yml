@@ -1,0 +1,16 @@
+services:
+  node-initia:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: initia-node
+    ports:
+      - "26656:26656"
+      - "26660:26660"
+    restart: unless-stopped
+    volumes:
+      - initia_volume:/app
+      - ./entrypoint.sh:/app/entrypoint.sh
+
+volumes:
+  initia_volume:
