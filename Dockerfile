@@ -33,7 +33,7 @@ mv /app/go/bin/initiad $HOME/.initia/cosmovisor/genesis/bin/
 RUN go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 
 RUN /app/.initia/cosmovisor/genesis/bin/initiad init "Stake Shark" && \
-/app/.initia/cosmovisor/genesis/bin/initiad config set client chain-id $INITIA_CHAIN_ID && \
+/app/.initia/cosmovisor/genesis/bin/initiad config set client chain-id $CHAIN_ID && \
 /app/.initia/cosmovisor/genesis/bin/initiad config set client node tcp://localhost:26657 && \
 sed -i -e "s|^node *=.*|node = \"tcp://localhost:26657\"|" $HOME/.initia/config/client.toml
 
