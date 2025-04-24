@@ -28,7 +28,7 @@ cd initia && \
 git checkout v1.0.0 && \
 make install && \
 mkdir -p $HOME/.initia/cosmovisor/genesis/bin && \
-mv go/bin/initiad $HOME/.initia/cosmovisor/genesis/bin/
+mv /app/go/bin/initiad $HOME/.initia/cosmovisor/genesis/bin/
 
 RUN go install cosmossdk.io/tools/cosmovisor/cmd/cosmovisor@latest
 
